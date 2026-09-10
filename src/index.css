@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-blue-900: oklch(33.73% 0.0282 244.63);
+    --color-blue-950: oklch(28.71% 0.0261 246.51);
+    --color-grey-50: oklch(99.11% 0 0);
+    --color-grey-400: oklch(59.99% 0 0);
+    --color-grey-950: oklch(19.23% 0.0074 229.32);
+}
+
+@layer base {
+    body {
+        font-family: "Nunito Sans", sans-serif;
+        @apply bg-grey-50 text-blue-950 dark:text-grey-50 dark:bg-blue-950 font-light;
+    }
+
+    button {
+        @apply cursor-pointer;
+    }
+
+    b, strong {
+        @apply font-semibold
+    }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  max-width: 1280px;
+}
