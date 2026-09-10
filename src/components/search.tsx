@@ -6,6 +6,7 @@ type SearchProps = {
 export function Search({ search, onSearchChange }: SearchProps) {
     return (
         <div className="w-full max-w-120 relative">
+            <label htmlFor="search" className="sr-only">Search for a country</label>
             <input
                 type="search"
                 name="search"

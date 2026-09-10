@@ -29,7 +29,7 @@ export function Countries({ countries }: CountriesProps) {
                             alt={country.name}
                             fetchPriority={index === 0 ? "high" : "auto"}
                             loading={index === 0 ? "eager" : "lazy"}
-                            className="w-full h-60 object-cover"
+                            className="w-full h-45 object-cover"
                         />
 
                         <div className="pt-4 px-4 pb-10 space-y-4">

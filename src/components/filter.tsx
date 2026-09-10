@@ -11,7 +11,7 @@ export function Filter({ region, onRegionChange }: FilterProps) {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
-    const regions =[...new Set(data.map(country => country.region).sort((a, b) => a.localeCompare(b)))];
+    const regions =["All", ...new Set(data.map(country => country.region).sort((a, b) => a.localeCompare(b)))];
 
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
@@ -62,7 +62,7 @@ export function Filter({ region, onRegionChange }: FilterProps) {
                                 <button
                                     key={item}
                                     type="button"
-                                    onClick={() => handleSelect(item)}
+                                    onClick={() => handleSelect(item === "All" ? "" : item)}
                                     className="block w-full px-6 py-2 text-left text-sm transition-colors hover:bg-gray-100 dark:hover:bg-blue-950 disabled:bg-gray-100 dark:disabled:bg-blue-950"
                                     disabled={isActive}
                                 >

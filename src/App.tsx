@@ -10,9 +10,9 @@ function App() {
       <Header />
 
       <Routes>
+        <Route path="*" element={<NotFoundPage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/country/:id" element={<CountryPage />} />
-        <Route path="/404" element={<NotFoundPage />} />
       </Routes>
     </>
   );
