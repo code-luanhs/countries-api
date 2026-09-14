@@ -1,4 +1,4 @@
-# Countries Explorer
+# REST Countries API
 
 [Português (Brasil)](README.pt-BR.md)
 
